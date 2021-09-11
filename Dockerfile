@@ -12,8 +12,8 @@ COPY --from=build ./pip-packages /home/pip-packages
 
 ENV PYTHONPATH="/home/pip-packages:${PYTHONPATH}"
 
-COPY ./main.py home/main.py
+COPY src/main.py home/main.py
+COPY src/docker_entrypoint.sh .
 COPY ./.env home/.env
-COPY ./docker_entrypoint.sh .
 
 ENTRYPOINT sh docker_entrypoint.sh
