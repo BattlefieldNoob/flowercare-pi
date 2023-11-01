@@ -1,1 +1,1 @@
-docker buildx build --platform linux/arm/v7 .
+docker build --platform linux/arm/v7 .
